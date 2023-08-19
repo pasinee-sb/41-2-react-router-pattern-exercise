@@ -1,11 +1,8 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import BlogHome from "./BlogHome";
-import Post from "./Post";
+
 import Doglist from "./Doglist";
+import DogDetail from "./DogDetail";
 
 function Routes() {
   return (
@@ -15,7 +12,7 @@ function Routes() {
         {/* // what props will this need? */}
       </Route>
       <Route path="/dogs/:name">
-        <DogDetails />
+        <DogDetail />
         {/* // what props will this need? */}
       </Route>
       <Redirect to="/dogs" />

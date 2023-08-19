@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import dogs from "./Dogdata";
 
 function Nav() {
   return (
     <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About Us</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
-      <li><Link to="/blog">Blog</Link></li>
-      <li><Link to="/blargh">Broken Link</Link></li>
+      {dogs.map((dog) => (
+        <li>
+          <Link to={`/dogs/${dog.name.toLocaleLowerCase()}`}>{dog.name}</Link>
+        </li>
+      ))}
     </ul>
   );
 }
